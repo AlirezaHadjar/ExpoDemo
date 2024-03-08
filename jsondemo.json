@@ -1,0 +1,9 @@
+{
+    "fileName": "file_name.jpeg",
+    "height": 2848,
+    "path": "/Users/path_to_your_file/file_name.jpeg",
+    "type": "image/jpeg",
+    "uri": "file:///Users/path_to_your_file/file_name.jpeg",
+    "width": 4288,
+    "base64": "..."
+}
