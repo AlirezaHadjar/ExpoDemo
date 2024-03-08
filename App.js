@@ -1,12 +1,14 @@
 import { DragDropContentView } from "expo-drag-drop-content-view";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import { IDragDropContentView } from "./Demo";
+import { IDragDropContentView } from "./IDragDropContentView";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <IDragDropContentView />
+      <IDragDropContentView
+        style={{ width: 200, height: 200, borderRadius: 20 }}
+      />
     </View>
   );
 }

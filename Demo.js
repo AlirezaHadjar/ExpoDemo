@@ -6,7 +6,7 @@ import {
 import React, { useEffect, useState } from "react";
 import {
   Image,
-  PermissionsAndroid,
+  // PermissionsAndroid,
   Platform,
   StyleSheet,
   View,
@@ -38,25 +38,28 @@ const styles = StyleSheet.create({
   },
 });
 
-const usePermission = () => {
-  useEffect(() => {
-    const fn = async () => {
-      try {
-        await PermissionsAndroid.request(
-          "android.permission.READ_MEDIA_IMAGES"
-        );
-      } catch (_) {}
-    };
-    if (Platform.OS === "android") fn();
-  }, []);
-};
+// const usePermission = () => {
+//   useEffect(() => {
+//     const fn = async () => {
+//       try {
+//         await PermissionsAndroid.request(
+//           "android.permission.READ_MEDIA_IMAGES"
+//         );
+//       } catch (_) {}
+//     };
+//     if (Platform.OS === "android") fn();
+//   }, []);
+// };
 
 export const IDragDropContentView = (props) => {
-  usePermission();
+  // usePermission();
   const [imageData, setImageData] = useState(null);
   return (
     <DragDropContentView
       {...props}
+      draggableImageSources={imageData?.map(
+        (image) => image.uri || image.base64
+      )}
       onDropEvent={(event) => {
         setImageData(event.assets);
       }}
@@ -76,7 +79,10 @@ export const IDragDropContentView = (props) => {
                 },
               ]}
             >
-              <Image source={{ uri: asset.uri }} style={styles.image} />
+              <Image
+                source={{ uri: asset.uri || asset.base64 }}
+                style={styles.image}
+              />
             </View>
           );
         })}
