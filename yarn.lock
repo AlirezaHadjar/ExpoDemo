@@ -3544,10 +3544,10 @@ expo-constants@~15.4.0:
   dependencies:
     "@expo/config" "~8.5.0"
 
-expo-drag-drop-content-view@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/expo-drag-drop-content-view/-/expo-drag-drop-content-view-0.4.2.tgz#530643c775d32db1449d514cf77b47f1a94721fc"
-  integrity sha512-V6bMdHxXu5zg34cq1KP38aUCuc5bV8UmPF/pWHCeKvebdWuHXf01tUY0GelrQi5nV3f/VibTjGQt567ByINYzA==
+expo-drag-drop-content-view@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/expo-drag-drop-content-view/-/expo-drag-drop-content-view-0.5.0.tgz#fbab9eb3dc02581046f3d55b12cad6b7e9305171"
+  integrity sha512-T6IL1ZJmF3i3GO9W2kQz/IuOub/GotlZ1zSqNMGWhKiEEUgWrV5B3vrqcrDpULxjWIMxt+BihVj5WR3MBSvTeA==
 
 expo-file-system@~16.0.0:
   version "16.0.5"
